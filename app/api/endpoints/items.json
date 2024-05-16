@@ -1,0 +1,22 @@
+[
+    {
+        "name": "chair",
+        "description": "this is a chair",
+        "price": 10
+    },
+    {
+        "name": "table",
+        "description": "this is a table",
+        "price": 12
+    },
+    {
+        "name": "laptop",
+        "description": "this is a laptop",
+        "price": 14
+    },
+    {
+        "name": "Afghanistan",
+        "description": "+93",
+        "price": "10$"
+    }
+]
