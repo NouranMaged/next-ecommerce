@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import invitationReducer from "./features/slices/cartSlice";
+import cartReducer from "./features/slices/cartSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      invitationScreen: invitationReducer,
+      cartHook: cartReducer,
     },
   });
 };
