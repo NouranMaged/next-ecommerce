@@ -68,7 +68,6 @@ const cartSlice = createSlice({
         }
       }
     },
-
     setFilteredItems: (state, action: PayloadAction<CartItem[]>) => {
       state.allItems = action.payload;
     },

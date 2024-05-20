@@ -7,6 +7,7 @@ import { setFilteredItems } from "@/lib/features/slices/cartSlice";
 import { CartItem } from "@/lib/types/types";
 import { PayloadAction } from "@reduxjs/toolkit";
 import SortBtn from "@/app/components/sortBtn";
+import FilterBtn from "@/app/components/filterBtn";
 
 const HomePage = () => {
   const { allItems } = useAppSelector((state) => state.cartHook);
@@ -20,8 +21,13 @@ const HomePage = () => {
   };
   return (
     <div>
-      <div className="flex justify-end">
-        <SortBtn /> <SearchInput onSearch={handleSearch} />
+      <div className="flex-col flex justify-end float-right">
+        <div>
+          <SortBtn /> <SearchInput onSearch={handleSearch} />
+        </div>
+        <div>
+          <FilterBtn />
+        </div>
       </div>
 
       <div className="flex justify-between w-full gap-5">
