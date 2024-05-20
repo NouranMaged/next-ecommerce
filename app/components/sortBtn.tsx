@@ -1,11 +1,10 @@
 import { handleSortedItems } from "@/lib/features/slices/cartSlice";
-import { useAppSelector } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { CartItem } from "@/lib/types/types";
 import React from "react";
-import { useDispatch } from "react-redux";
 
 const SortBtn = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { allItems } = useAppSelector((state) => state.cartHook);
 
   const handleSort = (event: React.ChangeEvent<HTMLSelectElement>) => {
