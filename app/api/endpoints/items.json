@@ -1,22 +1,26 @@
 [
-    {
-        "name": "chair",
-        "description": "this is a chair",
-        "price": 10
-    },
-    {
-        "name": "table",
-        "description": "this is a table",
-        "price": 12
-    },
-    {
-        "name": "laptop",
-        "description": "this is a laptop",
-        "price": 14
-    },
-    {
-        "name": "Afghanistan",
-        "description": "+93",
-        "price": "10$"
-    }
+  {
+    "name": "chair",
+    "description": "this is a chair",
+    "price": 12,
+    "numberOfItems": 0
+  },
+  {
+    "name": "table",
+    "description": "this is a table",
+    "price": 8,
+    "numberOfItems": 0
+  },
+  {
+    "name": "laptop",
+    "description": "this is a laptop",
+    "price": 7,
+    "numberOfItems": 0
+  },
+  {
+    "name": "coffe",
+    "description": "this is coffee",
+    "price": 100,
+    "numberOfItems": 0
+  }
 ]

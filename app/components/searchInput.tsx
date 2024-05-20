@@ -1,22 +1,24 @@
-import React from "react";
-import items from "@/app/api/endpoints/items.json";
+import { SearchBarProps } from "@/lib/types/types";
+import { useState } from "react";
 
-const SearchInput = () => {
-    return (
-        <div>
-            {items.map((item, i) => {
-                return (
-                    <>
-                        <div key={i} className="cart">
-                            <h1 className="text-3xl font-bold underline">{item.name}</h1>
-                            <p>{item.description}</p>
-                            <p>{item.price}</p>
-                        </div>
-                    </>
-                );
-            })}
-        </div>
-    );
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+    onSearch(value);
+  };
+
+  return (
+    <input
+      type="text"
+      placeholder="Search items..."
+      value={searchTerm}
+      onChange={handleSearch}
+      className=" border-solid-1px m-5 p-2 bg-green-200 relative"
+    />
+  );
 };
 
-export default SearchInput;
+export default SearchBar;
